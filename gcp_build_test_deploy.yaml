@@ -16,12 +16,12 @@ steps:
     - 'CLOUDSDK_COMPUTE_ZONE=${_ZONE}'
     - 'CLOUDSDK_CONTAINER_CLUSTER=${_CLUSTER}'
   
-    options:
-      logging: 'CLOUD_LOGGING_ONLY'
+options:
+  logging: 'CLOUD_LOGGING_ONLY'
   
-    substitutions:
-      _CLUSTER: 'cluster-1'
-      _ZONE: 'us-central1-c'
-      _K8SDEPLOYMENT: 'demo-api'
-      _TAG_NAME: $SHORT_SHA
-      _IMAGE_NAME: 'gcr.io/roidtc-oct-user600/internal:${_TAG_NAME}'
+substitutions:
+  _CLUSTER: 'cluster-1'
+  _ZONE: 'us-central1-c'
+  _K8SDEPLOYMENT: 'demo-api'
+  _TAG_NAME: $SHORT_SHA
+  _IMAGE_NAME: 'gcr.io/roidtc-oct-user600/internal:${_TAG_NAME}'
